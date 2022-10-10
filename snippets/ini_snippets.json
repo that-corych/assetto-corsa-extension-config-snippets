@@ -1,0 +1,72 @@
+{
+    "Include carpaint materials library":{
+        "prefix": "material_carpaint",
+        "description": "Includes carpaint materials base",
+        "body": [
+            "[INCLUDE: common/materials_carpaint.ini]"
+        ]
+    },
+
+    "Include interior materials library":{
+        "prefix": "material_interior",
+        "description":"Includes interior materials base",
+        "body":[
+            "[INCLUDE: common/materials_interior.ini]"
+        ]
+    },
+
+    "Include glass materials library":{
+        "prefix": "material_glass",
+        "description": "Includes glass materials base",
+        "body": [
+            "[INCLUDE: common/materials_glass.ini]"
+        ]
+    },
+
+    "Include carpaint metallic materials library":{
+        "prefix": "material_carpaint_metallic",
+        "description": "Includes carpaint metallic materials base",
+        "body": [
+            "[Material_CarPaint_Metallic]",
+            "CarPaintMaterial = Material",
+            "FresnelMax = 1",
+            "FresnelC = 0.1",
+            "BrightnessAdjustment = 0.9",
+            "ColoredSpecular = 0.9",
+            "AmbientSpecular = 0.6",
+            "AmbientSpecularEXP = 2.5",
+            "ClearCoatThickness = 0.06"
+        ]
+    },
+
+    "Include carpaint matte materials library":{
+        "prefix": "material_carpaint_matte",
+        "description": "Includes carpaint matte materials base",
+        "body": [
+            "[Material_CarPaint_Matte]",
+            "CarPaintMaterial = Material",
+            "FresnelMax = 1",
+            "FresnelC = 0.1",
+            "AmbientSpecular = 1.0",
+            "AmbientSpecularEXP = 4.0",
+            "SpecularBase = 0.3, 5",
+            "SpecularSun = 0, 1"
+        ]
+    },
+
+    "Include carpaint chrome materials library":{
+        "prefix": "material_carpaint_chrome",
+        "description": "Includes carpaint chrome materials base",
+        "body": [
+            "[Material_CarPaint_Chrome]",
+            "CarPaintMaterial = Material",
+            "FresnelMax = 1",
+            "FresnelC = 0.4",
+            "BrightnessAdjustment = 0.5",
+            "ColoredSpecular = 0.9",
+            "AmbientSpecular = 0.0",
+            "AmbientSpecularEXP = 2.5",
+            "ClearCoatThickness = 0.0"
+        ]
+    }
+}

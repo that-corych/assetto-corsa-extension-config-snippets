@@ -1,0 +1,49 @@
+{
+  "name": "assetto-corsa-extension-config-snippets",
+  "displayName": "Assetto Corsa Extension Config snippets",
+  "description": "Assetto Corsa Extension Config snippets for easily work with game",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.72.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:assetto-corsa-extension-config-snippets.helloWorld"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "assetto-corsa-extension-config-snippets.helloWorld",
+        "title": "Hello World"
+      }
+    ],
+    "snippets": [
+      {
+        "language": "ini",
+        "path": "./snippets/ini_snippets.json"
+      }
+    ]
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "pretest": "npm run lint",
+    "test": "node ./test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/glob": "^8.0.0",
+    "@types/mocha": "^10.0.0",
+    "@types/node": "16.x",
+    "@types/vscode": "^1.72.0",
+    "@vscode/test-electron": "^2.1.5",
+    "eslint": "^8.24.0",
+    "glob": "^8.0.3",
+    "mocha": "^10.0.0",
+    "typescript": "^4.8.4"
+  },
+  "dependencies": {
+    "git": "^0.1.5"
+  }
+}
