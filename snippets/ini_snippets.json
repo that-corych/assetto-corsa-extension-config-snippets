@@ -27,7 +27,7 @@
         "prefix": "material_license_plate",
         "description": "Includes license plate materials base",
         "body":[
-            "[INCLUDE: common/materials_licene_plate.ini]"
+            "[INCLUDE: common/materials_license_plate.ini]"
         ]
     },
 
@@ -309,6 +309,61 @@
             "DetailNormalTexture = common/pbr_plastic.dds",
             "DetailNormalPBRSmoothnessGamma = 1",
             "DetailTextureBlur = 1"
+        ]
+    },
+
+    "Include v2 leather interior material base":{
+        "prefix": "materials_interior_leather_v2",
+        "description": "Include v2 leather interior materials base",
+        "body": [
+            "[Material_Leather_v2]",
+            "Materials = Material",
+            "Reflectance = 0.04",
+            "DetailNormalTexture = common/pbr_leather_bumpy.dds",
+            "DetailNormalIntensity = 3",
+            "DetailNormalPBRSecondaryColor = 1, 1, 1, 0.08",
+            "DetailNormalBlend = -1"
+        ]
+    },
+
+    "Include v2 spotty leather interior material base":{
+        "prefix": "materials_interior_spotty_leather_v2",
+        "description": "Include v2 spotty leather interior materials base",
+        "body": [
+            "[Material_LeatherSpotty_v2]",
+            "Materials = Material",
+            "Reflectance = 0.03",
+            "DetailNormalTexture = common/pbr_leather_spotty.dds",
+            "DetailNormalPBRSecondaryColor = 0, 0, 0, 0.1"
+        ]
+    },
+
+    "Include v2 poked leather interior material base":{
+        "prefix": "materials_interior_poked_leather_v2",
+        "description": "Include v2 poked leather interior materials base",
+        "body": [
+            "[Material_LeatherPoked_v2]",
+            "Materials = Material",
+            "Reflectance = 0.04",
+            "DetailNormalTexture = common/pbr_leather_pattern.dds",
+            "DetailNormalIntensity = 2",
+            "DetailNormalPBRSecondaryColor = 0, 0, 0, 10",
+            "DetailNormalPBRReflectance = 10"
+        ]
+    },
+
+    "Include v2 fabric interior material base":{
+        "prefix": "materials_interior_fabric_v2",
+        "description": "Include fabric interior materials base",
+        "body": [
+            "[Material_Fabric_v2]",
+            "Materials = Material",
+            "Reflectance = 0.02",
+            "DetailNormalTexture = common/pbr_fabric.dds",
+            "DetailNormalPBRSecondaryColor = 0, 0, 0, 0.3",
+            "UseClothShading = 1",
+            "Reflectance = 0.4",
+            "ClothSheenColor = 1, 1, 1"
         ]
     }
 }

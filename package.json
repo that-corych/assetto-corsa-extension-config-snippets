@@ -2,6 +2,7 @@
   "name": "assetto-corsa-extension-config-snippets",
   "displayName": "Assetto Corsa Extension Config snippets",
   "description": "Assetto Corsa Extension Config snippets for easily work with game",
+  "publisher": "corych",
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.72.0"
