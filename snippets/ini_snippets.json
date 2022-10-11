@@ -1,5 +1,5 @@
 {
-    "Include carpaint materials library":{
+    "Include carpaint materials base":{
         "prefix": "material_carpaint",
         "description": "Includes carpaint materials base",
         "body": [
@@ -7,7 +7,7 @@
         ]
     },
 
-    "Include interior materials library":{
+    "Include interior materials base":{
         "prefix": "material_interior",
         "description":"Includes interior materials base",
         "body":[
@@ -15,7 +15,7 @@
         ]
     },
 
-    "Include glass materials library":{
+    "Include glass materials base":{
         "prefix": "material_glass",
         "description": "Includes glass materials base",
         "body": [
@@ -23,7 +23,15 @@
         ]
     },
 
-    "Include carpaint metallic materials library":{
+    "Include number plates materials base":{
+        "prefix": "material_license_plate",
+        "description": "Includes license plate materials base",
+        "body":[
+            "[INCLUDE: common/materials_licene_plate.ini]"
+        ]
+    },
+
+    "Include carpaint metallic materials base":{
         "prefix": "material_carpaint_metallic",
         "description": "Includes carpaint metallic materials base",
         "body": [
@@ -39,7 +47,7 @@
         ]
     },
 
-    "Include carpaint matte materials library":{
+    "Include carpaint matte materials base":{
         "prefix": "material_carpaint_matte",
         "description": "Includes carpaint matte materials base",
         "body": [
@@ -54,7 +62,7 @@
         ]
     },
 
-    "Include carpaint chrome materials library":{
+    "Include carpaint chrome materials base":{
         "prefix": "material_carpaint_chrome",
         "description": "Includes carpaint chrome materials base",
         "body": [
@@ -67,6 +75,240 @@
             "AmbientSpecular = 0.0",
             "AmbientSpecularEXP = 2.5",
             "ClearCoatThickness = 0.0"
+        ]
+    },
+
+    "Include carpaint pearlescent materials base":{
+        "prefix": "material_carpaint_pearl",
+        "description": "Includes carpaint pearlescent materials base",
+        "body": [
+            "[Material_CarPaint_Pearl]",
+            "CarPaintMaterial = Material",
+            "FresnelMax = 1",
+            "FresnelC = 0.1",
+            "BrightnessAdjustment = 0.9",
+            "PearlescentSpecular = 1.0",
+            "AmbientSpecular = 1.0",
+            "AmbientSpecularEXP = 3.0",
+            "ClearCoatThickness = 0.09",
+            "SpecularBase = 1, 50"
+        ]
+    },
+
+    "Include old carpaint materials base":{
+        "prefix": "material_carpaint_old",
+        "description": "Includes carpaint old materials base",
+        "body": [
+            "[Material_CarPaint_Old]",
+            "CarPaintMaterial = Material",
+            "NormalsNoise = 0.01",
+            "NormalsNoiseUV = 80",
+            "FresnelMax = 0.4",
+            "FresnelC = 0.04",
+            "AmbientSpecular = 1",
+            "SpecularBase = 0.4, 40",
+            "SpecularSun = 0.5, 1000"
+        ]
+    },
+
+    "Include chameleon carpaint materials base":{
+        "prefix": "material_carpaint_chameleon",
+        "description": "Includes carpaint chameleon materials base",
+        "body": [
+            "[Material_CarPaint_Chameleon]",
+            "CarPaintMaterial = Material",
+            "ChameleonColorA = #33007f, 0.5",
+            "ChameleonColorB = #ffff00, 1",
+            "ChameleonExponent = 1.2",
+            "ChameleonCenter = 0.45"
+        ]
+    },
+
+    "Include metal carpaint materials base":{
+        "prefix": "material_carpaint_metal",
+        "description": "Includes carpaint metal materials base",
+        "body": [
+            "[Material_CarPaint_Metal]",
+            "CarPaintMaterial = Material",
+            "UseMetallicReflections = 1",
+            "FresnelMax = 1",
+            "FresnelC = 1",
+            "FlakesK = 1",
+            "ClearCoatThickness = 0.2",
+            "ColoredSpecular = 1.0",
+            "AmbientSpecular = 0.5",
+            "BrightnessAdjustment = 0.2"
+        ]
+    },
+
+    "Include chromaflair carpaint materials base":{
+        "prefix": "material_carpaint_chromaflair",
+        "description": "Includes carpaint chromaflair materials base",
+        "body": [
+            "[Material_CarPaint_ChromaFlair]",
+            "CarPaintMaterial = Material",
+            "CarPaintVersionAware = 4",
+            "UseDiffuseAlphaAsChromaFlairMask = 0",
+            "ChromaFlairFlakesBase = 0.5",
+            "GradientTexture = your_path",
+            "ApplyTilingFix = 1",
+            "ClearCoatReflectionSharpness = 1"
+        ]
+    },
+
+    "Include pbr carpaint materials base":{
+        "prefix": "material_carpaint_pbr",
+        "description": "Includes carpaint pbr materials base",
+        "body": [
+            "[Material_CarPaint]",
+            "CarPaintMaterial = Material",
+            "UseDiffuseAlphaAsMask = 0",
+            "UseDiffuseAlphaAsClearCoatMask = 0",
+            "ClearCoatThickness = 0.0",
+            "ClearCoatTint = 0, 0, 0",
+            "ClearCoatIOR = 1.0",
+            "ClearCoatIntensity = 1.0",
+            "ClearCoatSpecular = 0",
+            "ClearCoatSpecular = $", "$CarPaintVersionAware >= 2 and 1 or discard()",
+            "ColoredBlackSpecular = 0",
+            "ColoredBlackSpecular = $",
+            "FresnelMax = 0.8",
+            "FresnelC = 0.16",
+            "UseMetallicReflections = 0.0",
+            "FlakesK = 0.1",
+            "BrightnessAdjustment = 1.0",
+            "SpecularMult = 1.0",
+            "ApplyTilingFix = 0",
+            "ApplyMatteFix = 0",
+            "ApplyMatteFix = $", "$CarPaintVersionAware >= 3 and 1 or discard()",
+            "NormalsMode = DAMAGE",
+            "BaseSpecularColor = 1, 1, 1",
+            "ColoredSpecular = 0.0",
+            "PearlescentSpecular = 0.0",
+            "AmbientSpecular = 0.0",
+            "AmbientSpecularEXP = 2.5",
+            "DiffuseSmoothness = 0, 0",
+            "NormalizeAO = 0.0",
+            "ClearCoatReflectionSharpness = 0"
+        ]
+    },
+
+    "Include rainbow chrome carpaint materials base":{
+        "prefix": "material_carpaint_rainbow_chrome",
+        "description": "Includes carpaint rainbow chrome materials base",
+        "body": [
+            "[Material_CarPaint_RainbowChrome]",
+            "CarPaintMaterial = Material",
+            "ChromeRainbowFlip = 0",
+            "ChromeRainbowNegate = 1",
+            "ChromeRainbowFocus = 1",
+            "ChromeRainbowMult = 1",
+            "ChameleonColorA = 0, 0",
+            "ChameleonColorB = 0, 0",
+            "ChameleonExponent = 1",
+            "ChameleonCenter = 0.5",
+            "UseDiffuseAlphaAsRainbowMask = 0"
+        ]
+    },
+
+    "Include rainbow carpaint materials base":{
+        "prefix": "material_carpaint_rainbow_chrome",
+        "description": "Includes carpaint rainbow materials base",
+        "body": [
+            "[Material_CarPaint_Rainbow]",
+            "CarPaintMaterial = Material",
+            "ChromeRainbowFlip = 0",
+            "ChromeRainbowNegate = 0",
+            "RainbowIntensity = 0.7",
+            "AnisotropicIntensity = 0.0",
+            "AnisotropicAmount = 0.9",
+            "Gloss = 0.7",
+            "BrightnessAdjustment = 0.8",
+            "ChameleonColorA = 0, 0",
+            "ChameleonColorB = 0, 0",
+            "ChameleonExponent = 1",
+            "ChameleonCenter = 0.5",
+            "UseDiffuseAlphaAsRainbowMask = 0"
+        ]
+    },
+
+    "Include material windscreen banner base":{
+        "prefix": "materials_interior_windscreenbanner",
+        "description": "Include material windscreen banner base",
+        "body": [
+            "[Material_WindscreenBanner]",
+            "Materials = Material",
+            "BlurBackground = 0",
+            "MaskPass = 0.5",
+            "MaskPassColor = 0, 0, 0",
+            "ColorfulShadowing = 2"
+        ]
+    },
+
+    "Include digital screen interior material base":{
+        "prefix": "materials_interior_digitalscreen",
+        "description": "Include digital screen interior material base",
+        "body": [
+            "[Material_DigitalScreen]",
+            "Materials = Material",
+            "MatrixType = IPS",
+            "UseTextureCoordinates = 1",
+            "ScreenScale = 480",
+            "ScreenAspectRatio = 0.25",
+            "Emissive = 4",
+            "FlipXY = 0",
+            "SkewTextureCoordinates = 0",
+            "TreatTextureAsHDR = 0"
+        ]
+    },
+
+    "Include digital screen glass overlay interior material base":{
+        "prefix": "materials_interior_digitalscreen_glassoverlay",
+        "description": "Include digital screen glass overlay interior material base",
+        "body": [
+            "[Material_DigitalScreen_GlassOverlay]",
+            "Materials = Material",
+            "MatrixType = IPS",
+            "UseTextureCoordinates = 1",
+            "ScreenScale = 480",
+            "ScreenAspectRatio = 0.25",
+            "FlipXY = 0"
+        ]
+    },
+
+    "Include fur interior material base":{
+        "prefix": "materials_interior_fur",
+        "description": "Include fur interior material base",
+        "body": [
+            "[Material_Fur]",
+            "Materials = Material",
+            "FurLayers = 6",
+            "FurScale = 1",
+            "FurFacingScale = 0.5",
+            "FurGravityFactor = 1",
+            "FurUseTextures = 1",
+            "FurFidelityScale = 1",
+            "FurOcclusion = 0.5",
+            "FurRimExponent = 3",
+            "FurAmbient = 1",
+            "FurDiffuse = 1",
+            "ThresholdExponent = 0.8",
+            "ThresholdMultipler = 0.8"
+        ]
+    },
+
+    "Include v2 plastic interior material base":{
+        "prefix": "materials_interior_plastic_v2",
+        "description": "Include v2 plastic interior materials base",
+        "body": [
+            "[Material_Plastic_v2]",
+            "Materials = Material",
+            "Reflectance = 0.04",
+            "DetailNormalPBRSecondaryColor = 0, 0, 0, 0.5",
+            "DetailNormalBlend = 0.5",
+            "DetailNormalTexture = common/pbr_plastic.dds",
+            "DetailNormalPBRSmoothnessGamma = 1",
+            "DetailTextureBlur = 1"
         ]
     }
 }
