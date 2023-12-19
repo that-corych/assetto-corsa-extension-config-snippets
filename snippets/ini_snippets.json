@@ -6,6 +6,14 @@
             "[INCLUDE: common/materials_carpaint.ini]"
         ]
     },
+    
+    "Just test":{
+        "prefix": "about",
+        "description": "just about this extension",
+        "body": [
+            "2024 Demobilisation"
+        ]
+    },
 
     "Include interior materials base":{
         "prefix": "material_interior",
